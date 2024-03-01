@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>CRUDS</title>
+</head>
+<body class="bg-neutral-900 font-Tomorrow text-xs sm:text-xs md:text-base lg:text-xl relative">
+    <!-- start-layout --->
+    <div id="layout" class="layout w-full sm:w-full md:w-4/5  m-auto relative ">
+    <!-- start-header --->
+        <div class="header text-center p-7">
+            <h2 class=" font-semibold text-5xl text-slate-200  p-3">CRUDS</h2>
+            <p class=" font-bold  text-1xl text-slate-400">PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+    <!-- End-header --->
+       <!-- start-landing --->
+        <div class="landing p-3 text-white">
+            <input id="title" type="text" placeholder="title">
+                <!-- get-total --->
+            <div class="inputs-total w-full flex ">
+            <input onkeyup="getTotal()" id="price" type="number" placeholder="price">
+            <input onkeyup="getTotal()" id="taxes" type="number" placeholder="taxes">
+            <input onkeyup="getTotal()" id="discount" type="number" placeholder="discount">
+            <small id="total" class="total bg-red-950 p-2 text-center rounded-lg before:content-['TOTAL:']  "></small>
+            </div>
+                <!-- End-total --->
+            <input id="count" type="number" placeholder="count">
+            <input id="category" type="text" placeholder="category">
+            <button id="create-btn">create</button>
+             <!-- start-search --->
+            <div class="outputs">
+                <div class="flex justify-between items-center mb-1 bg-zinc-950 rounded-3xl">
+                <input   class="m-1 ml-3" id="search" type="text" placeholder="search by title">
+                <button onclick="getsearch()" class="w-1/4 mr-2" id="searchBTN">search</button>
+                </div>
+            </div>
+                <!-- End-search --->
+                <div id="deleteAll">
+                </div>
+            <!-- start-table--->
+        <div class=" text-xs flex items-center justify-center">
+            <table class="w-full text-center text-9 sm:text-9 md:text-base lg:text-xl text-white  my-3 ">
+                <tr>
+                    <th >ID</th>
+                    <th >TITLE</th>
+                    <th >PRICE</th>
+                    <th >TAXES</th>
+                    <th >DISCOUNT</th>
+                    <th >TOTAL</th>
+                    <th >CATEGORY</th>
+                    <th >COUNT</th>
+                    <th >UP DATE</th>
+                    <th >DELETE</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    <div id="popup" class="popupBG w-full h-full absolute top-0">
+        <div  class=" m-auto bg-neutral-950 bg-opacity-100 w-9/12 rounded-md border-violet-950 border-2 border-solid absolute top-80 left-1/2 translate-x-x">
+            <h1 id="popup-h1" class="p-3 pt-20 text-gray-400 sm:text-sm md:text-lg lg:text-xl font-semibold ">Are you sure to delete product ?</h1>
+           <div class="flex justify-end mt-12">
+            <button  id="YES">YES</button>
+            <button id="NO">NO</button>
+           </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

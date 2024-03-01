@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input{
+  @apply  w-full bg-zinc-950 p-3 my-2 mr-2 outline-none rounded-md
+}
+button{
+    @apply w-full text-gray-300 font-semibold sm:text-xs lg:text-xl bg-violet-950 hover:bg-purple-950 p-2 my-1 rounded-2xl mb-2
+}
+#Delete,
+#upDate{
+  @apply    text-xs sm:text-xs md:text-base py-1  ;
+}
+
+input::placeholder{
+  @apply sm:text-9 lg:text-base  text-gray-600
+
+}
+
+th{
+  @apply p-thpadding
+}
+.popupBG{
+  display: none;
+  background-color: #0f0b1885;
+}
+#YES,
+#NO{
+  @apply w-1/6 m-2 mb-5 p-2
+}
+.plus,
+.min{
+  @apply m-1 p-0
+}
+.count{
+  @apply flex items-center justify-around
+}
